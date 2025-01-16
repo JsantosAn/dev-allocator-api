@@ -26,7 +26,7 @@ python --version
 
 2. Clone o repositório com o comando:
 ```bash
-git clone <U[RL_DO_REPOSITORIO](https://github.com/JsantosAn/dev-allocator-api.git)>
+git clone https://github.com/JsantosAn/dev-allocator-api.git
 ```
 
 ## Instalando Dependências
