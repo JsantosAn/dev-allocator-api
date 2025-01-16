@@ -131,3 +131,9 @@ Para isso, você pode seguir o seguinte procedimento no Swagger:
   Bearer seu_token_jwt_aqui
 ```
 4. Clique em Authorize para autenticar e liberar o uso do token para as próximas requisições.
+## Rodar os Testes
+Para rodar todos os testes da aplicação, execute o seguinte comando no terminal:
+ ```bash
+python manage.py test
+```
+
