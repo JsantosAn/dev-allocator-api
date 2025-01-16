@@ -80,7 +80,7 @@ PG_PORT=5432
   python manage.py migrate
  ```
 ### Criando um Superusuário
-1. Após realizar a migração, execute o seguinte comando para criar um superusuário:
+1. Após realizar a migração, execute o seguinte comando para criar um superusuário, que será utilizado na rota ```/token```  :
 
  ```bash
    python manage.py createsuperuser
@@ -92,3 +92,42 @@ PG_PORT=5432
  ```bash
   python manage.py runserver
  ```
+
+## Gerando o Token na Rota /token 
+1. Quando você faz uma requisição POST para a rota /token passando as credenciais (usuário e senha), a aplicação vai verificar essas informações e, se forem válidas, gerar um token JWT. Esse token é então enviado de volta na resposta.
+
+#### Exemplo de requisição para gerar o token
+A requisição pode ser feita usando o Swagger, com os seguintes parâmetros no corpo da requisição:
+
+ ```bash
+  {
+  "username": "seu_nome_de_usuario", 
+  "password": "sua_senha"
+}
+ ```
+2. Quando a autenticação for bem-sucedida, a resposta da requisição será um token JWT:
+
+ ```bash
+  {  
+  "refresh": "seu_token_jwt_aqui"
+  "refresh": "access"
+}
+```
+ * Esse token é o que você usará para autorizar suas requisições subsequentes à API.
+
+## Utilizando o Token no Swagger
+
+Depois de obter o token JWT da rota /token, você precisa usá-lo nas requisições seguintes para acessar os endpoints protegidos pela autenticação.
+
+Para isso, você pode seguir o seguinte procedimento no Swagger:
+
+1. No Swagger, localize o botão Authorize no canto superior direito da tela.
+
+2. Clique no botão Authorize.
+
+3. No campo que aparecer, insira o token JWT no formato:
+
+ ```bash
+  Bearer seu_token_jwt_aqui
+```
+4. Clique em Authorize para autenticar e liberar o uso do token para as próximas requisições.
