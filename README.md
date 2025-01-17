@@ -32,7 +32,7 @@ git clone https://github.com/JsantosAn/dev_allocator_api.git
 ## Instalando Dependências
 1. Navegue até o diretório do projeto:
 ```bash
-    cd dev-allocator-api
+cd dev-allocator-api
 ```
 
 
@@ -44,23 +44,23 @@ git clone https://github.com/JsantosAn/dev_allocator_api.git
 * Para Mac/Linux:
 
  ```bash
-    python3 -m venv venv
+ python3 -m venv venv
  ```
 
 3. Ative o ambiente virtual:
 * Para Windows:
  ```bash
-    .\venv\Scripts\activate
+ .\venv\Scripts\activate
  ```
 * Para Mac/Linux:
  ```bash
-   source venv/bin/activate
+ source venv/bin/activate
  ```
 
 4. Instale as dependências do projeto:
 
  ```bash
-   pip install -r requirements.txt
+ pip install -r requirements.txt
  ```
 
 
@@ -77,20 +77,20 @@ PG_PORT=5432
  ```
 2. Execute as migrações:
  ```bash
-  python manage.py migrate
+ python manage.py migrate
  ```
 ### Criando um Superusuário
 1. Após realizar a migração, execute o seguinte comando para criar um superusuário, que será utilizado na rota ```/token```  :
 
  ```bash
-   python manage.py createsuperuser
+ python manage.py createsuperuser
  ```
 2. O comando pedirá para você fornecer informações como nome de usuário, email e senha. Preencha os campos conforme desejado.
 
 ## Executando a Aplicação
 1. Para rodar a aplicação localmente, basta executar o seguinte comando no terminal:
  ```bash
-  python manage.py runserver
+ python manage.py runserver
  ```
 
 ## Gerando o Token na Rota /token 
@@ -128,7 +128,7 @@ Para isso, você pode seguir o seguinte procedimento no Swagger:
 3. No campo que aparecer, insira o token JWT no formato:
 
  ```bash
-  Bearer seu_token_jwt_aqui
+Bearer seu_token_jwt_aqui
 ```
 4. Clique em Authorize para autenticar e liberar o uso do token para as próximas requisições.
 ## Rodar os Testes
