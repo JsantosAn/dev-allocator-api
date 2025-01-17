@@ -7,8 +7,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/token/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
+    path('token/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view()),
     path('', lambda request: redirect('swagger/')),  
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('', include('dev_allocator_app.urls')), ]
